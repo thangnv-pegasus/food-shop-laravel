@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductsController;
 use App\Models\Aboutme;
 use App\Models\Banner;
 use Illuminate\Support\Facades\Route;
@@ -23,9 +24,7 @@ Route::get('/gioi-thieu', function () {
     return view('pages.gioi-thieu');
 });
 
-Route::get('/san-pham', function () {
-    return view('pages.san-pham');
-});
+Route::get('/san-pham', [ProductsController::class, 'create']);
 
 Route::get('/{collectionName}', [CollectionController::class, 'setCollection']);
 

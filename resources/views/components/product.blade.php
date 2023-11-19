@@ -22,7 +22,7 @@
                     <i class="fa-solid fa-magnifying-glass leading-[40px] cursor-pointer"></i>
                     <div x-show="open"
                         class="fixed top-0 left-0 right-0 bottom-0 bg-[rgba(0,0,0,0.2)] z-20 flex items-center justify-center">
-                        <div class="w-4/5 min-h-[400px] h-4/5 overflow-y-scroll text-black bg-white relative rounded-lg overflow-x-hidden p-8"
+                        <div class="w-4/5 h-5/6 overflow-y-scroll text-black bg-white relative rounded-lg overflow-x-hidden p-8"
                             @click.outside = "open = false">
                             <button @click="open = false"
                                 class="absolute text-black top-0 right-0 text-2xl px-2 py-1 z-10">

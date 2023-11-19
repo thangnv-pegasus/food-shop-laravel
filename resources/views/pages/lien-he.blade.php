@@ -1,3 +1,5 @@
 <x-layout>
-    page lien he
+    <div>
+        page lien he
+    </div>
 </x-layout>

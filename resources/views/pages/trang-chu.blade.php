@@ -74,6 +74,51 @@
                 </div>
             </div>
         </div>
+
+        {{-- blogs --}}
+        <div>
+            <div class="max-w-container mx-auto py-10">
+                <x-title-collection title="Tin tức" isImage='true' to="/tin-tuc" />
+                <div class="grid grid-cols-3 gap-x-8">
+                    @foreach ($blogs as $blog)
+                        <x-blog-item :$blog />
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+        {{-- top brand --}}
+        <div>
+            <div class="max-w-container mx-auto py-10">
+                <x-title-collection title="Top thương hiệu" isImage='true' />
+                <div class="grid grid-cols-6 gap-x-20">
+                    <div class="w-full h-32 select-none">
+                        <img src="https://bizweb.dktcdn.net/thumb/compact/100/350/980/themes/802125/assets/brand_1.png?1677439224289"
+                            alt="" class="w-full h-full object-cover object-center block select-none">
+                    </div>
+                    <div class="w-full h-32 select-none">
+                        <img src="https://bizweb.dktcdn.net/thumb/compact/100/350/980/themes/802125/assets/brand_2.png?1677439224289"
+                            alt="" class="w-full h-full object-cover object-center block select-none">
+                    </div>
+                    <div class="w-full h-32 select-none">
+                        <img src="https://bizweb.dktcdn.net/thumb/compact/100/350/980/themes/802125/assets/brand_3.png?1677439224289"
+                            alt="" class="w-full h-full object-cover object-center block select-none">
+                    </div>
+                    <div class="w-full h-32 select-none">
+                        <img src="https://bizweb.dktcdn.net/thumb/compact/100/350/980/themes/802125/assets/brand_4.png?1677439224289"
+                            alt="" class="w-full h-full object-cover object-center block select-none">
+                    </div>
+                    <div class="w-full h-32 select-none">
+                        <img src="https://bizweb.dktcdn.net/thumb/compact/100/350/980/themes/802125/assets/brand_5.png?1677439224289"
+                            alt="" class="w-full h-full object-cover object-center block select-none">
+                    </div>
+                    <div class="w-full h-32 select-none">
+                        <img src="https://bizweb.dktcdn.net/thumb/compact/100/350/980/themes/802125/assets/brand_6.png?1677439224289"
+                            alt="" class="w-full h-full object-cover object-center block select-none">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 

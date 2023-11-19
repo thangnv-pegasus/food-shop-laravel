@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\AboutMe;
 use App\Models\Banner;
+use App\Models\Blog;
 use App\Models\Product;
 use Illuminate\Database\Seeder;
 
@@ -26,6 +27,7 @@ class DatabaseSeeder extends Seeder
         AboutMe::truncate();
         Banner::truncate();
         Product::truncate();
+        Blog::truncate();
 
         $arrBanner = [
             [
@@ -93,7 +95,7 @@ class DatabaseSeeder extends Seeder
                 'description' => "Các chuyên gia dinh dưỡng khuyên rằng mỗi ngày bạn hãy uống 1 ly nước chanh tươi ấm pha với mật ong để không ngừng nâng cao sức đề kháng, tăng cường hệ thống miễn dịch và bảo vệ sức khỏe",
                 'detail' => "<p>Với tính năng đa tác dụng và hiệu quả vượt trội trong cuộc sống hàng ngày, chanh tươi từ lâu đã trở thành thực phẩm quen thuộc trong tủ lạnh nhiều gia đình. Bên cạnh khả năng góp phần giúp chị em làm đẹp, phát huy công dụng trong nhà bếp, vệ sinh nhà cửa, chanh tươi còn có rất nhiều lợi ích đối với sức khỏe mà không phải ai cũng biết.</p><p>Các chuyên gia dinh dưỡng khuyên rằng mỗi ngày bạn hãy uống 1 ly nước chanh tươi ấm pha với mật ong để không ngừng nâng cao sức đề kháng, tăng cường hệ thống miễn dịch và bảo vệ sức khỏe vì trong chanh tươi có chứa rất nhiều kali giúp kích thích hoạt động bộ não, đảm bảo hoạt động của hệ thần kinh, huyết áp ổn định, tăng cường chức năng tiêu hóa, phát huy khả năng thanh lọc cơ thể của thận đẻ bài trừ độc tố, không những thế nguồn vitamin C dồi dào trong chanh tươi còn là thành phần không thế thiếu giúp bạn nâng cao sức đề kháng mỗi ngày nữa đấy.</p>",
                 'collection' => 'fruit',
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/10.jpg?v=1553634594520','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/triseothambangchanh1.jpg?v=1553634594520']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/10.jpg?v=1553634594520', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/triseothambangchanh1.jpg?v=1553634594520']
             ],
             [
                 "id" => 2,
@@ -106,7 +108,7 @@ class DatabaseSeeder extends Seeder
                 'collection' => 'fruit',
                 'description' => "Mùa hè là thời gian lý tưởng để nhâm nhi nhiều loại trái cây và vải nằm trong số những trái ngon và bổ không thể bỏ qua.",
                 'detail' => "<p>Ngoài hương vị “hết chỗ chê”, loại trái cây này còn có giá trị dinh dưỡng và y học vô cùng độc đáo, gồm những tác dụng sau:</p><p>- Kháng ung thư</p><p>- Điều hòa huyết áp</p><p>- Ngăn ngừa các bệnh</p><p>- Giàu Vitamin</p><p>- Tạo ra miễn dịch</p>",
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/676ccb75fcbc84a3db0b69f5af3c22.jpg?v=1553634601407','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/bn.jpg?v=1553634601407']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/676ccb75fcbc84a3db0b69f5af3c22.jpg?v=1553634601407', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/bn.jpg?v=1553634601407']
             ],
             [
                 'id' => 3,
@@ -119,7 +121,7 @@ class DatabaseSeeder extends Seeder
                 'weigh' => null,
                 'description' => null,
                 'detail' => "<p>Giá trị dinh dưỡng:  Đào là nguồn cung cấp Vitamin C giá trị, và thích hợp cho việc giảm cân</p><p>Chất ngọt trong quả  mận là đường tự nhiên rất tốt cho cơ thể và người bị đái tháo đường. Nước ép quả mận có tác dụng mát, thanh nhiệt, giải nóng, nhuận tràng, dùng làm nước giải khát mùa hè rất tốt.</p><p>Cách chọn Đào: Chọn quả có vỏ màu đỏ thẫm, da trơn và chắc, những quả lớn, không quá cứng hoặc quả mềm là vừa chín tới</p><p>Lưu ý Quý khách hàng: để giữ quả đào tươi ngon lâu hơn, hãy bảo quản đào trong nhiệt độ khoảng 4 độ C</p>",
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/5.jpg?v=1553634600437','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/15.jpg?v=1553634600437']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/5.jpg?v=1553634600437', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/15.jpg?v=1553634600437']
             ],
             [
                 'id' => 4,
@@ -132,7 +134,7 @@ class DatabaseSeeder extends Seeder
                 'weigh' => 1,
                 'description' => "Dâu tây nói chung và dâu tây Đà Lạt nói riêng, từ lâu được biết tới là một loại trái cây rất tốt cho con người",
                 'detail' => "<p>Dâu tây nói chung và dâu tây Đà Lạt nói riêng, từ lâu được biết tới là một loại trái cây rất tốt cho con người. Tạp chí Các nhân tố sinh học của Hà Lan đăng kết quả nghiên cứu cho thấy quả dâu tây là một thứ quả đặc biệt có lợi cho sức khỏe con người. Loại quả này chứa nhiều chất bổ hơn cả cà chua (dâu tây chứa chất chống oxy hóa nhiều gấp 10 lần cà chua), quả kiwi, hay hoa lơ xanh, những loại thực phẩm nổi tiếng có giá trị dinh dưỡng cao, được nhiều người ưa dùng. Nhưng giá trị lớn nhất của quả dâu tây mà các nhà khoa học ghi nhận được đó là tác dụng chữa bệnh.</p><p>Theo đông y, dâu tây vị ngọt, chua, tính mát, công hiệu bổ phổi, điều hòa chức năng tiêu hóa, bồi bổ cơ thể, mát máu, giải độc. Dùng chữa các chứng như ho do phổi nóng, cổ họng sưng đau, chán ăn, tiểu ngắn, tiểu gắt, thiếu máu suy nhược, ung nhọt, say rượu.</p>",
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/13.jpg?v=1553634599460','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/d1juuv.png?v=1553634599460']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/13.jpg?v=1553634599460', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/d1juuv.png?v=1553634599460']
             ],
             [
                 "id" => 5,
@@ -155,7 +157,7 @@ class DatabaseSeeder extends Seeder
                 <p>- Nhiệt độ bảo quản:</p>
                 <p>+ Bảo quản kho công nghiệp: từ 0 đến 4 độ C. Táo sẽ giữ được độ tươi, độ giòn trong vòng từ 1-3 tháng. Sau thời gian này, táo sẽ ngọt hơn, độ giòn (PSI) trở nên thấp hơn (xốp hơn).</p>
                 ",
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/11.jpg?v=1553634598330','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/14195265ef9d1449d3863328b5a50e.jpg?v=1553634598330']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/11.jpg?v=1553634598330', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/14195265ef9d1449d3863328b5a50e.jpg?v=1553634598330']
             ],
             [
                 'id' => 6,
@@ -171,7 +173,7 @@ class DatabaseSeeder extends Seeder
                     <p>Theo phân tích khoa học, quả lê chứa protein, lipid, cenlulose, canxi, phốt pho, sắt, caroten, vitamin B1, B2, C, đường gluco, axít acetic... Việc ăn lê thường xuyên có tác dụng tốt trong điều trị bệnh cao huyết áp, tim mạch (dẫn tới váng đầu hoa mắt, tim đập loạn nhịp, ù tai), lao phổi, viêm phế quản cấp tính. Hàm lượng vitamin, đường khá phong phú trong quả lê có tác dụng bảo vệ gan, dưỡng gan và lợi tiêu hóa khá tốt.</p>
                     <p>Do lê có tính hàn nên người bị bệnh đau lạnh bụng, đi lỏng không nên dùng; không ăn lê bị dập nát để tránh mắc bệnh đường ruột. Giống như trái táo, trái lê có thể có các màu vàng, xanh, nâu, đỏ hoặc sự kết hợp của hai hay nhiều màu sắc và nó cũng là liều thuốc có lợi cho sức khỏe gia đình bạn.</p>
                 ",
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/14.jpg?v=1553634597507','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/lexanh.jpg?v=1553634597507']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/14.jpg?v=1553634597507', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/lexanh.jpg?v=1553634597507']
             ],
             [
                 'id' => 7,
@@ -188,7 +190,7 @@ class DatabaseSeeder extends Seeder
                 <p>Cam Úc có chứa nhiều Vitamin C, có tác dụng hồi phục sức khỏe nhanh, tốt cho da, chống lão hóa, tốt cho người ốm.</p>
                 <p>Ăn cam Navel Úc thường xuyên sẽ giúp bảo vệ bạn khỏi mắc các bệnh truyền nhiễm do virus, giảm đáng kể nguy cơ mắc bệnh sỏi thận. Nếu bạn muốn tránh lượng calo dư thừa, hãy thêm cam Navel Úc vào chế độ dinh dưỡng hằng ngày của mình.</p>
                 ",
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/4.jpg?v=1553634596937','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/camruotvang.jpg?v=1553634596937']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/4.jpg?v=1553634596937', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/camruotvang.jpg?v=1553634596937']
             ],
             [
                 'id' => 8,
@@ -208,7 +210,7 @@ class DatabaseSeeder extends Seeder
                     <p>Giảm cân: Cái này nghe có vẻ phi lí, vì hạt điều giàu năng lượng như thế làm sao giảm cân được. Nhưng Lê là người đã sử dụng nó để giảm cân, vấn đề là sử dụng thế nào mà thôi.</p>
                     <p>Nguyên tắc giảm cân là ăn đủ dinh dưỡng nhưng tiết chế lượng calori và khống chế được cơn them ăn. Hạt điều đi đầu trong việc cân bằng dinh dưỡng trong khẩu phần ăn hằng ngày, và tạo cảm giác rất no.</p>
                 ",
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/799f392ed63934c64a2c8829cfdad6-90347a95-1fc7-4c97-8cd3-42e5c2d0641a.jpg?v=1553634595877','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/2aa3195461c954ef0ab5e054dd2a9b.jpg?v=1553634595877']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/799f392ed63934c64a2c8829cfdad6-90347a95-1fc7-4c97-8cd3-42e5c2d0641a.jpg?v=1553634595877', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/2aa3195461c954ef0ab5e054dd2a9b.jpg?v=1553634595877']
             ],
             [
                 'id' => 9,
@@ -230,7 +232,7 @@ class DatabaseSeeder extends Seeder
                     </p>
                     <p>3. Cách bảo quản quả óc chó<br>Bảo quản ở nơi thoáng mát khô ráo, không để hở không khí, khi mở túi nên đóng mép kĩ sau mỗi lần sử dụng, có thể cho vào lọ đậy kín bảo quản tốt nhất ở ngăn mát của tủ lạnh.</p>
                 ',
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/38f5a71fcbd96417784fa367c87816.jpg?v=1553634593250','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/25d0a6f59078141eea4f314ad9d55e.jpg?v=1553634593250']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/38f5a71fcbd96417784fa367c87816.jpg?v=1553634593250', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/25d0a6f59078141eea4f314ad9d55e.jpg?v=1553634593250']
             ],
             [
                 'id' => 10,
@@ -249,7 +251,7 @@ class DatabaseSeeder extends Seeder
                     <p>Giảm cân: Cái này nghe có vẻ phi lí, vì hạt điều giàu năng lượng như thế làm sao giảm cân được. Nhưng Lê là người đã sử dụng nó để giảm cân, vấn đề là sử dụng thế nào mà thôi.</p>
                     <p>Nguyên tắc giảm cân là ăn đủ dinh dưỡng nhưng tiết chế lượng calori và khống chế được cơn them ăn. Hạt điều đi đầu trong việc cân bằng dinh dưỡng trong khẩu phần ăn hằng ngày, và tạo cảm giác rất no.</p>
                 ",
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/2.jpg?v=1553634592270','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/799f392ed63934c64a2c8829cfdad6.jpg?v=1553634592270']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/2.jpg?v=1553634592270', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/799f392ed63934c64a2c8829cfdad6.jpg?v=1553634592270']
             ],
             [
                 'id' => 11,
@@ -268,7 +270,7 @@ class DatabaseSeeder extends Seeder
                     <p>- Tác dụng của hạnh nhân với bà bầu, trẻ nhỏ rất tích cực. Sử dụng hạt hạnh nhân sẽ cung cấp dinh dưỡng cần thiết, giúp bảo vệ sức khỏe của phụ nữ đang mang thai, thai nhi và trẻ em.</p>
                     <p>- Hạt hạnh nhân giúp da và tóc của bạn được đẹp hơn.</p>
                 ',
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/124db5143d68ef4e55938ee056be8d.jpg?v=1553634591287','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/7e251c93607dd471e83e83a91df289.jpg?v=1553634591287']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/124db5143d68ef4e55938ee056be8d.jpg?v=1553634591287', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/7e251c93607dd471e83e83a91df289.jpg?v=1553634591287']
             ],
             [
                 'id' => 12,
@@ -288,7 +290,7 @@ class DatabaseSeeder extends Seeder
                     <p>- Hành tây là thực phẩm tốt cho nhóm phụ nữ mắc bệnh mất kinh, vàng da và liệt sức vì nóng, vì vậy những người ốm mệt có thể ăn cháo hành và phát huy tác dụng tức thì.</p>
                     <p> - Hành các loại, kể cả hành tây có mức độ sát trùng rất mạnh, vì vậy có khả năng ngăn ngừa các chứng bệnh viêm nhiễm đường ruột rất hiệu quả. </p>
                 ',
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/16.jpg?v=1553634590390','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/hanhtay4nfqt.jpg?v=1553634590390']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/16.jpg?v=1553634590390', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/hanhtay4nfqt.jpg?v=1553634590390']
             ],
             [
                 'id' => 13,
@@ -304,7 +306,7 @@ class DatabaseSeeder extends Seeder
                     <p>Súp lơ có chứa các thành phần như: Protein 3,5%; gluxit 4,9%; và nhiều khoáng chất, vitamin như: can-xi (26 mg%); phốtpho (51 mg%); sắt (1,4 mg%); natri (20 mg%); kali (349 mg%); betacaroten (40 mg%); vitamin B1 (0,11 mg%), vitamin C (70 mg%)… Súp lơ có hai loại trắng và xanh. Loại xanh thường giòn và dai hơn nên có cảm giác ngon hơn, cũng rất tốt cho sức khỏe - giúp ngăn ngừa được nhiều căn bệnh như: Tim mạch, ung thư tuyến tiền liệt, bàng quang, viêm loét dạ dày...</p>
                     <p>Với những người có bệnh dạ dày, bị loét hành tá tràng có thể dùng súp lơ tươi rửa sạch, xay (hay ép) lấy nước. Dùng 200-300 ml nước này trước bữa ăn, dùng 2 lần/ngày, và mỗi đợt trị liệu khoảng 10 ngày như thế. Với những người suy nhược thần kinh thì trong bữa ăn của mình, nên dùng món cháo nấu từ súp lơ (cắt nhỏ) với gạo nếp. Với người có huyết áp cao, thì dùng súp lơ, đường trắng, giấm ăn (vừa đủ), làm cải bắp dầm để dành ăn.</p>
                 ',
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/9ea4a2f9dad46485d9c385955275bb.jpg?v=1553634589380','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/lotrang2.jpg?v=1553634589380']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/9ea4a2f9dad46485d9c385955275bb.jpg?v=1553634589380', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/lotrang2.jpg?v=1553634589380']
             ],
             [
                 'id' => 14,
@@ -321,7 +323,7 @@ class DatabaseSeeder extends Seeder
                     <p>Một số giống nho Mỹ đặc sắc được ưa chuộng phải kể đến là nho Mỹ đỏ, nho mỹ đen không hạt, nho Mỹ xanh không hạt, nho ngón tay phù thủy. Nhiều người lầm tưởng rằng, chỉ có nho đỏ thì mới có lợi cho sức khỏe nhưng thực ra nho đen Mỹ hay nho xanh cũng đều có những đặc điểm dinh dưỡng riêng của nó:</p>
                     <p>Nho tím rất giàu chất anthocyanin - chất được ví như một loại mỹ phẩm thiên nhiên quý giá chống lại quá trình lão hóa sớm. Nho đen Mỹ lại chứa thành phần tốt cho mái tóc, ăn nhiều nho đen Mỹ giúp bạn có mái tóc mượt mà.</p>
                 ',
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/anhnho.jpg?v=1553634588157','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/nhomyden.jpg?v=1553634588157']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/anhnho.jpg?v=1553634588157', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/nhomyden.jpg?v=1553634588157']
             ],
             [
                 'id' => 15,
@@ -361,7 +363,7 @@ class DatabaseSeeder extends Seeder
                     <p>- Cân bằng tỷ lệ trao đổi chất và tăng cường năng lượng</p>
                     <p>- Ngăn ngừa sự phân mảnh của tiểu cầu có thể gây ra tắc nghẽn trong hệ thốngtuần hoàn</p>
                 ',
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/2600x600.jpg?v=1553634587223','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/nam111.png?v=1553634587223']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/2600x600.jpg?v=1553634587223', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/nam111.png?v=1553634587223']
             ],
             [
                 'id' => 16,
@@ -401,7 +403,7 @@ class DatabaseSeeder extends Seeder
                     <p>- Cân bằng tỷ lệ trao đổi chất và tăng cường năng lượng</p>
                     <p>- Ngăn ngừa sự phân mảnh của tiểu cầu có thể gây ra tắc nghẽn trong hệ thốngtuần hoàn</p>
                 ',
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/babaucothesudungnamlinhchimotc.jpg?v=1553634586397','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/namlinhchido2.jpg?v=1553634586397']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/babaucothesudungnamlinhchimotc.jpg?v=1553634586397', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/namlinhchido2.jpg?v=1553634586397']
             ],
             [
                 'id' => 17,
@@ -418,7 +420,7 @@ class DatabaseSeeder extends Seeder
                     <p>Mộc nhĩ đen (Nấm mèo, nấm tai mèo) có tên khoa học là Auricularia auricula, là những ký sinh trùng phát triển trên những cây có tán lá rộng hoặc trên những cây đã chết, chủ yếu vào mùa xuân, hạ, thu.</p>
                     <p>Loại nấm này tồn tại và phát triển tại các nước trong khu vực Châu Á và tại một số hòn đảo của Thái Bình Dương, những nơi có khí hậu ẩm ướt, mưa nhiều.</p>
                 ',
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/467115898050fac860eab.jpg?v=1553634585757','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/xmocnhiden2600x600jpgpagespeed.jpg?v=1553634585757','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/mocnhirungsapa1.jpg?v=1553634585757']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/467115898050fac860eab.jpg?v=1553634585757', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/xmocnhiden2600x600jpgpagespeed.jpg?v=1553634585757', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/mocnhirungsapa1.jpg?v=1553634585757']
             ],
             [
                 'id' => 18,
@@ -435,7 +437,7 @@ class DatabaseSeeder extends Seeder
                     <p>Các ấy có biết, trong 100g thịt bò có tới 28g protein cùng rất nhiều vitaminh B12, B6, khoáng chất cacnitin, kali, kẽm, magie, sắt... cơ đấy! Đồng thời, khối lượng thịt đó sẽ cung cấp cho chúng mình 280kcal năng lượng, gấp đôi so với cá và nhiều loại thịt động vật khác.</p>
                     <p>Điểm đặc biệt của protein trong thịt bò đó là nó chứa nhiều acid amin, acid gốc nitro. Chúng sẽ giúp các ấy biến protein trong thức ăn thành đường hữu cơ để cung cấp cho các hoạt động hàng ngày. Ngoài ra, thịt bò còn chứa acid linoleic và palmiotelic chống lại ung thư và các mầm bệnh khác nữa nhá!</p>
                 ',
-                'images'=> ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/thitbothan600x6001.jpg?v=1553634585177','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/resize581977f9436242d1b130b95a.jpg?v=1553634585177']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/thitbothan600x6001.jpg?v=1553634585177', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/resize581977f9436242d1b130b95a.jpg?v=1553634585177']
             ],
             [
                 'id' => 19,
@@ -454,7 +456,7 @@ class DatabaseSeeder extends Seeder
                     <p>Các ấy có biết, trong 100g thịt bò có tới 28g protein cùng rất nhiều vitaminh B12, B6, khoáng chất cacnitin, kali, kẽm, magie, sắt... cơ đấy! Đồng thời, khối lượng thịt đó sẽ cung cấp cho chúng mình 280kcal năng lượng, gấp đôi so với cá và nhiều loại thịt động vật khác.</p>
                     <p>Điểm đặc biệt của protein trong thịt bò đó là nó chứa nhiều acid amin, acid gốc nitro. Chúng sẽ giúp các ấy biến protein trong thức ăn thành đường hữu cơ để cung cấp cho các hoạt động hàng ngày. Ngoài ra, thịt bò còn chứa acid linoleic và palmiotelic chống lại ung thư và các mầm bệnh khác nữa nhá!</p>
                 ',
-                'images'=> ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/resize.jpg?v=1553634584570','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/resize2.jpg?v=1553634584570','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/resize1.jpg?v=1553634584570']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/resize.jpg?v=1553634584570', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/resize2.jpg?v=1553634584570', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/resize1.jpg?v=1553634584570']
             ],
             [
                 'id' => 20,
@@ -501,7 +503,7 @@ class DatabaseSeeder extends Seeder
                     <p>• Ngừa ung thư</p>
                     <p>Hàm lượng vitamin C dồi dào trong quả chôm chôm còn có tác dụng giúp cho cơ thể hấp thụ các khoáng chất sắt và đồng dễ dàng hơn. Thêm vào đó, hoạt chất axít gallic trong quả chôm chôm hoạt động như chất chống ôxy hóa mạnh, giúp loại bỏ các gốc tự do gây hại cơ thể và phòng ngừa bệnh ung thư.</p>
                 ',
-                'images'=>['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/chomchom.jpg?v=1553634582947','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/50rambutan.jpg?v=1553634582947','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/freshrambutansrambutans1.jpg?v=1553634582947','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/large1474ef1ab3cf4b9d98dbcf4bd.jpg?v=1553634582947']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/chomchom.jpg?v=1553634582947', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/50rambutan.jpg?v=1553634582947', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/freshrambutansrambutans1.jpg?v=1553634582947', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/large1474ef1ab3cf4b9d98dbcf4bd.jpg?v=1553634582947']
             ],
             [
                 'id' => 22,
@@ -524,7 +526,7 @@ class DatabaseSeeder extends Seeder
                     <p>Carbohydrate trong dứa chủ yếu là các loại đường đơn giản, chẳng hạn như sucrose, fructose và glucose. Chúng cũng chứa một số chất xơ.</p>
                     <p>Với 165 gramdứa chứa 21,7 gram carbs, và 2,3 gam chất xơ, có 19,4 gram carbs được tiêu hóa.</p>
                 ',
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/imagepineapple5.jpg?v=1553634581787','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/930801pineapple.jpg?v=1553634581787','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/17172.jpg?v=1553634581787','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/pineappleistockphoto.jpg?v=1553634581787']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/imagepineapple5.jpg?v=1553634581787', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/930801pineapple.jpg?v=1553634581787', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/17172.jpg?v=1553634581787', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/pineappleistockphoto.jpg?v=1553634581787']
             ],
             [
                 'id' => 23,
@@ -545,7 +547,7 @@ class DatabaseSeeder extends Seeder
                     tăng cường thị lực, giúp mắt luôn khỏe mạnh, hạn chế tình trạng quáng gà vào lúc trời gần tối, tăng khả năng nhìn trong trường hợp ánh 
                     sáng bị giảm. Chính vì những giá trị đóng góp cho sức khỏe con người mà giá cherry  thường cao và được nhiều người tìm mua.</p>
                 ',
-                'images'=> ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/congdungcuaquacherry3jpeg.jpg?v=1553634580863','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/nhungloiichcuaquacherrymanglai.jpg?v=1553634580863','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/cherryeliquid.jpg?v=1553634580863']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/congdungcuaquacherry3jpeg.jpg?v=1553634580863', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/nhungloiichcuaquacherrymanglai.jpg?v=1553634580863', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/cherryeliquid.jpg?v=1553634580863']
             ],
             [
                 'id' => 24,
@@ -567,7 +569,7 @@ class DatabaseSeeder extends Seeder
                     <p><b>Điều trị tiêu chảy:</b> thực phẩm nhẹ như nước ép táo và chuối được khuyến cáo cho điều trị tiêu chảy. Khi bị tiêu chảy, kali trong cơ thể bị điện giải và mất đi với số lượng lớn làm cho cơ thể cảm thấy yếu ớt . Ăn chuối có thể bổ sung lại lượng kali cơ thể bị mất.</p>
                     <p>Một quả chuối trung bình (khoảng 126 gram) được coi là một phần ăn. Một khẩu phần của chuối chứa 110 calo, 30 gam carbohydrate và 1 gam protein.</p>
                 ',
-                'images'=>['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/227331.jpg?v=1553634580007','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/bo21600x600.jpg?v=1553634580007','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/chuoilabamin600x600.jpg?v=1553634580007']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/227331.jpg?v=1553634580007', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/bo21600x600.jpg?v=1553634580007', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/chuoilabamin600x600.jpg?v=1553634580007']
             ],
             [
                 'id' => 25,
@@ -590,7 +592,7 @@ class DatabaseSeeder extends Seeder
                 <p>- Những người bị nóng trong người, đặc biệt là trẻ em.</p>
                 <p>- Bệnh nhân bị đái tháo đường, vì lựu có tác dụng kiểm soát lượng đường trong máu, nhưng không phải là loại quả lý tưởng để ăn thường xuyên.</p>
                 ',
-                'images'=>['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/product7600x600.jpg?v=1553634579280','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/sonduongmoiduongchatluuvataofa.jpg?v=1553634579280','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/luunamphi.jpg?v=1553634579280']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/product7600x600.jpg?v=1553634579280', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/sonduongmoiduongchatluuvataofa.jpg?v=1553634579280', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/luunamphi.jpg?v=1553634579280']
             ],
             [
                 'id' => 26,
@@ -625,7 +627,7 @@ class DatabaseSeeder extends Seeder
                 lớn hơn và có khía màu vàng apricot, vị chua; Garcinia indica hay Cocum = Conca cho quả chua, áo hạt màu tím, dùng làm giấm, hạt ép lấy dầu.)
                 </p>
                 ',
-                'images'=>['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/mangcut.jpg?v=1553634578453','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/loiichkhotinchosuckhoetuquaman.jpg?v=1553634578453','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/levimartmangcut600x600.gif?v=1553634578453']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/mangcut.jpg?v=1553634578453', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/loiichkhotinchosuckhoetuquaman.jpg?v=1553634578453', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/levimartmangcut600x600.gif?v=1553634578453']
             ],
             [
                 'id' => 27,
@@ -645,7 +647,7 @@ class DatabaseSeeder extends Seeder
                     <p><b>Tác dụng của quả xoài đối với bệnh thiếu máu</b></p>
                     <p>Đối với những người bị thiếu máu, xoài có chứa rất nhiều các chất sắt để bổ sung máu. Ngoài ra, chất sắt của xoài còn có thể làm sản sinh thêm lượng máu cần thiết nhất cho cơ thể.</p>
                 ',
-                'images'=>['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/8xoaicatchu600x600.jpg?v=1553634577340','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/14885169176146366559.jpg?v=1553634577340','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/14740116713719050563.jpg?v=1553634577340','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/97157chk5912015031026001480009.jpg?v=1553634577340']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/8xoaicatchu600x600.jpg?v=1553634577340', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/14885169176146366559.jpg?v=1553634577340', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/14740116713719050563.jpg?v=1553634577340', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/97157chk5912015031026001480009.jpg?v=1553634577340']
             ],
             [
                 'id' => 28,
@@ -662,7 +664,7 @@ class DatabaseSeeder extends Seeder
                 <p>Được lớp vỏ dày bảo vệ nên trái luôn mọng nước (88%), hàm lượng potassium (300 mg/100g) đáng kể nên dưa lưới có tính năng thanh lọc, lợi niệu, chất xơ (1g/100g) giúp nhuận trường, ít calori (48 Kcal), beta caroten và vitamin C.</p>
                 <p>Theo kết quả phân tích định lượng các chất khoáng và vitamin thì cứ 100g dưa lưới có chứa: Acid Folic (21 μg), Nianci (0.734 mg), beta-carotene (2020 μg), Magiê (12 mg), sắt (0,21 mg), canxi (9mg), Vitamin C (36,7 mg), vitamin A (169 μg), năng lượng (34 kcal).</p>
                 ',
-                'images'=> ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/1754chk59120150818260410800000.jpg?v=1553634576667','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/hatgiongdualuoimui1grande.jpg?v=1553634576667','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/6668620140403101151.jpg?v=1553634576667','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/26600x600.jpg?v=1553634576667','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/2018329152537untitled3.jpg?v=1553634576667']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/1754chk59120150818260410800000.jpg?v=1553634576667', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/hatgiongdualuoimui1grande.jpg?v=1553634576667', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/6668620140403101151.jpg?v=1553634576667', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/26600x600.jpg?v=1553634576667', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/2018329152537untitled3.jpg?v=1553634576667']
             ],
             [
                 'id' => 29,
@@ -679,7 +681,7 @@ class DatabaseSeeder extends Seeder
                 <p>Chứa nhiều Vitamin B</p>
                 <p>Sầu riêng có chứa một lượng vitamin B khá cao, các vitamin B sẽ có một loạt các lợi ích cho sức khỏe như ngăn ngừa lão hóa và bệnh tim, giúp tăng HDL (cholesterol tốt) và thậm chí có thể giúp cải thiện tâm trạng, giảm bớt trầm cảm.</p>
                 ',
-                'images'=>['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/dimaybaycoduocmangsaurienghayk.jpg?v=1553634575557','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/sauriengri.jpg?v=1553634575557']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/dimaybaycoduocmangsaurienghayk.jpg?v=1553634575557', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/sauriengri.jpg?v=1553634575557']
             ],
             [
                 'id' => 30,
@@ -705,7 +707,7 @@ class DatabaseSeeder extends Seeder
                 <p>Khi uống nước cam đều đặn, chúng ta - đặc biệt là trẻ nhỏ - có thể tận hưởng những dưỡng chất từ loại trái cây chua này (ít calori, giàu vitamin) và có thể giúp ngăn ngừa nguy cơ phát triển các bệnh tim mạch ở tuổi trưởng thành. Tuy nhiên, người ta cũng lưu ý rằng cam nguyên trái, chín cây và sạch có chứa nhiều hesperidin hơn, vì qua quá trình vắt ép, thành phần này dễ dàng bị thất thoát.</p>
                 <p>Thành phần từ cam được sử dụng rất phong phú từ lá, hoa, vỏ cây và trái đều có thể dùng để hãm thành nước uống có vị đắng nhẹ và hương cam đặc trưng. Nước hãm lá cam có thể giúp hạ hỏa, đặc biệt khi mất ngủ, xoa dịu rối loạn chức năng lưu thông máu.</p>
                 ',
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/camuc600x600.jpg?v=1553634575023','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/camruotvangmyvovimart22243b.jpg?v=1553634575023','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/2014040403361303citrusfruits06.jpg?v=1553634575023']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/camuc600x600.jpg?v=1553634575023', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/camruotvangmyvovimart22243b.jpg?v=1553634575023', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/2014040403361303citrusfruits06.jpg?v=1553634575023']
             ],
             [
                 'id' => 31,
@@ -727,7 +729,7 @@ class DatabaseSeeder extends Seeder
                     <p>Ngoài ra, chiết xuất từ chanh dây còn có hiệu quả trong việc tiêu diệt tế bào ung thư. Các dưỡng chất carotenoid và polyphenol dồi dào trong chanh dây là 
                     chất chống oxy hóa mạnh mẽ có thể ức chế sự tăng trưởng của các tế bào ung thư.</p>
                 ',
-                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/464sinhtothomchanhday.jpg?v=1553634574253','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/cachlamnuocepchanhdaygiupchiem-ce2ccee5-1172-422b-a62d-923f0344a1f0.jpg?v=1553634574253','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/440nuocepchanhday.jpg?v=1553634574253']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/464sinhtothomchanhday.jpg?v=1553634574253', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/cachlamnuocepchanhdaygiupchiem-ce2ccee5-1172-422b-a62d-923f0344a1f0.jpg?v=1553634574253', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/440nuocepchanhday.jpg?v=1553634574253']
             ],
             [
                 'id' => 32,
@@ -749,7 +751,7 @@ class DatabaseSeeder extends Seeder
                 <p>Mặc dù hàm lượng đường của cam có chỉ số glycemic thấp, dao động 31-51. Về giá trị các chỉ số đường huyết có liên quan đến sức khỏe. Các chỉ số glycemic thấp được giải thích bởi thực tế là cam rất giàu polyphenol và chất xơ.</p>
                 <p>Cam chủ yếu được tạo thành từ carbs và nước. Xếp hạng thấp về chỉ số đường huyết, do đó, cam không gây đột biến lớn về lượng đường trong máu.<p>
                 ',
-                'images'=>['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/158102.jpg?v=1553634573533','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/nuoccamepgiupgiaidocganhieuqua.jpg?v=1553634573533']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/158102.jpg?v=1553634573533', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/nuoccamepgiupgiaidocganhieuqua.jpg?v=1553634573533']
             ],
             [
                 'id' => 33,
@@ -767,7 +769,7 @@ class DatabaseSeeder extends Seeder
                     <p>Các ấy có biết, trong 100g thịt bò có tới 28g protein cùng rất nhiều vitaminh B12, B6, khoáng chất cacnitin, kali, kẽm, magie, sắt... cơ đấy! Đồng thời, khối lượng thịt đó sẽ cung cấp cho chúng mình 280kcal năng lượng, gấp đôi so với cá và nhiều loại thịt động vật khác.</p>
                     <p>Điểm đặc biệt của protein trong thịt bò đó là nó chứa nhiều acid amin, acid gốc nitro. Chúng sẽ giúp các ấy biến protein trong thức ăn thành đường hữu cơ để cung cấp cho các hoạt động hàng ngày. Ngoài ra, thịt bò còn chứa acid linoleic và palmiotelic chống lại ung thư và các mầm bệnh khác nữa nhá!</p>
                 ',
-                'images'=>['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/4921botuoithb.jpg?v=1553634572787','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/thitbothan600x600.jpg?v=1553634572787','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/radongthitbomy4.jpg?v=1553634572787']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/4921botuoithb.jpg?v=1553634572787', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/thitbothan600x600.jpg?v=1553634572787', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/radongthitbomy4.jpg?v=1553634572787']
             ],
             [
                 'id' => 34,
@@ -782,7 +784,7 @@ class DatabaseSeeder extends Seeder
                 'detail' => '
                     <p>Chất béo trong thịt lợn không phải là chất béo chuyển hóa mà chủ yếu là chất béo không bão hòa đơn và không bão hòa đa. Do đó, thịt lợn phù hợp với các chế độ ăn tốt cho tim mạch hoặc để giảm lượng cholesterol. Thịt lợn rất giàu khoáng chất như phốt pho, selenium, natri, kẽm, kali và đồng. Ngoài ra nó còn chứa hàm lượng sắt và magiê cao, tuy nhiên lượng canxi và mangan thì khá là ít ỏi. Thịt lợn là một nguồn cung vitamin phong phú như vitamin B1, B2, B5, B6, B12 và PP. Vitamin A và E cũng được tìm thấy tuy rất ít. Hàm lượng calo trong 100 gam thịt lợn là 458 calo.</p>
                 ',
-                'images'=>['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/14611211097538664793.jpg?v=1553634572043','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/duilon7.jpg?v=1553634572043','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/bactom96091.jpg?v=1553634572043']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/14611211097538664793.jpg?v=1553634572043', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/duilon7.jpg?v=1553634572043', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/bactom96091.jpg?v=1553634572043']
             ],
             [
                 'id' => 35,
@@ -804,7 +806,7 @@ class DatabaseSeeder extends Seeder
                     <p>Nấm kim châm có chứa nhiều arginine, nó có công dụng phòng chống viêm gan và loét dạ dày.</p>
                     <p>Năm 2005 nhiều nhà nghiên cứu thuộc Đại học Quốc gia Singapore đã chỉ ra rằng ở thân cây nấm kim châm có chứa một số lượng lớn protein làm giúp điều hòa hệ thống miễn dịch. Khi tiến hành thử nghiệm trên động vật cho thấy tác dụng khả quan đối với bệnh ung thư. Và nấm cũng chứa flammutoxin, đây là một loại protein loại cytolytic và cardiotoxic có tác dụng rất tốt cho người hấp thụ thức ăn kém.</p>
                 ',
-                'images'=>['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/takimcham600x600.jpg?v=1553634571383','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/nambaonguxam.jpg?v=1553634571383','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/fzn0370ll1600x600.jpg?v=1553634571383']
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/takimcham600x600.jpg?v=1553634571383', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/nambaonguxam.jpg?v=1553634571383', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/fzn0370ll1600x600.jpg?v=1553634571383']
             ],
             [
                 'id' => 36,
@@ -821,21 +823,73 @@ class DatabaseSeeder extends Seeder
                     <p>Chu kỳ sinh trưởng và phát triển của nấm rơm rất nhanh chóng (10-12 ngày). Những ngày đầu nấm nhỏ như hạt tấm có màu trắng (giai đoạn đinh ghim), 2-3 ngày sau lớn rất nhanh bằng hạt ngô, quả táo, quả trứng (giai đoạn hình trứng), lúc trưởng thành (giai đoạn phát tán bào tử) trông giống như một chiếc ô dù, có cấu tạo thành các phần hoàn chỉnh. Bã sau khi trồng nấm chế biến thành phân sinh học cao cấp. Ngoài ra, bã nấm còn dùng để nuôi trùn đất, lấy trùn nuôi gia cầm, gia súc và tôm, cá.</p>
                     <p>Ở các quốc gia vùng nhiệt đới rất thích hợp về nhiệt độ để nấm rơm sinh trưởng và phát triển. Nhiệt độ thích hợp để nấm phát triển từ 30-32oC; độ ẩm nguyên liệu (cơ chất) 65-70%; độ ẩm không khí 80%; pH = 7, thoáng khí. Nấm rơm sử dụng dinh dưỡng cellulose (có nhiều trong rơm rạ) trực tiếp từ nguyên liệu trồng.</p>
                 ',
-                'images'=>['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/namromtuoi600x600.jpg?v=1553634569637','https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/namromtuoi1.jpg?v=1553634569637']
-            
-                ]
+                'images' => ['https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/namromtuoi600x600.jpg?v=1553634569637', 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/products/namromtuoi1.jpg?v=1553634569637']
+
+            ]
+        ];
+
+        $arrBlogs = [
+            [
+                'title' => 'Rau xanh tăng giá mạnh vì trời mưa, người dân nội thành lao đao',
+                'create_at' => '2019-03-27',
+                'author' => 'Cool Team',
+                'content' => '<p>Khoảng gần một tuần nay, do ảnh hưởng của những cơn mưa lớn kéo dài liên tiếp nên nguồn cung rau xanh cho các chợ bắt đầu khan hiếm, giá tăng mạnh, thậm chí nhiều loại giá tăng gần gấp đôi.</p>
+                <p>Khảo sát của người viết tại một số chợ đầu mối, chợ truyền thống trên địa bàn Hà Nội như chợ Đình Công, chợ Cầu Giấy, Phùng Khoang, chợ Hôm, Chợ Dịch Vọng, chợ Nhổn… giá các loại rau, củ đã tăng phổ biến 20 -30% so với 1-2 tuần trước.</p>
+                <p>Cụ thể, tại chợ Dịch Vọng, rau dền, mồng tơi giá 8.000 đồng/mớ, tăng 2.000 đồng/mớ; rau muống tăng 3000 đồng/mớ lên 10.000 đồng/mớ; rau ngót cũng tăng 1.000 đồng/mớ lên 7.000 đồng/mớ; cải xanh tăng từ 5.000 đồng lên 8.000 đồng/mớ; bắp cải tăng 3.000 đồng/kg lên 15.000 đồng/kg; cải thảo tăng 5.000 đồng/kg lên 16.000 đồng/kg, mướp đắng tăng 10.000 đồng/kg lên 16.000 đồng/kg. Hành lá tăng giá mạnh nhất lên 60.000/kg.</p>
+                <p>Một số loại củ quả như cà chua còn có giá tăng gấp đôi, từ 20.000 đồng/kg lên 40.000 đồng/kg, cà rốt có giá từ 25.000 – 30.000 đồng/kg; su hào 8.000 đồng /củ…so với trước đợt bão.</p>
+                <p>Chị Nguyễn Thị Thanh, tiểu thương bán rau ở chợ Dịch Vọng cho biết, giá rau củ tặng mạnh do thời tiết mưa to gây ngập úng khiến nguồn cung rau củ giảm. Bên cạnh đó, đây là thời điểm cuối mùa vụ của một số loại rau củ như các loại rau muống, mồng tơi, mướp ngọt…cũng khiến cho nguồn cung ứng rau thiếu hụt.</p>
+                <p>“Như hôm nay ra chợ đầu mối nhập rau mà mỗi loại chỉ nhập được 5-10kg, bán đến tầm 8 giờ sáng rau ở sạp đã gần hết. Đến chiều, tôi đang không biết lấy hàng đâu bán cho khách”, chị Thanh chia sẻ.</p>
+                <p>Tại nhiều vùng trồng rau ngoại thành Hà Nội như Vân Nội, Song Phương, Tây Tựu... do mưa lớn kéo dài nên rau ít nhiều bị ngập úng, hư hại.</p>
+                <p>Bà Trần Thị Mai, tại xã Tây Tựu –Từ Liêm chuyên trồng sản xuất rau xanh bán buôn cho các chợ đầu mối cho biết, nhà bà trồng 6 sào rau xanh đủ các nhưng mấy ngày gần đây do mưa to ảnh hưởng nên làm cho rau trong vườn phát triển chậm và dập nát hết các luống rau mới gieo trồng.</p>
+                ',
+                'image' => 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/articles/49997669-476326726231228-9092403644171095934-n.jpg?v=1553650991913'
+            ],
+            [
+                'title' => 'Nhập khẩu rau quả vượt mốc 1 tỷ USD, Thái Lan chiếm 60% thị phần',
+                'create_at' => '2019-03-27',
+                'author' => 'Cool Team',
+                'content' => '
+                    <p>Theo báo cáo từ Bộ NN&PTNT, giá trị xuất khẩu hàng rau quả tháng 9 năm 2017 ước đạt 294 triệu USD, đưa giá trị xuất khẩu hàng rau quả 9 tháng đầu năm 2017 ước đạt 2,64 tỷ USD, tăng 44,2% so với cùng kỳ năm 2016.</p>
+                    <p>Trung Quốc, Nhật Bản, Hoa Kỳ và Hàn Quốc là 4 thị trường nhập khẩu hàng đầu của hàng rau quả Việt Nam trong 8 tháng đầu năm 2017, chiếm 85,2% tổng giá trị xuất khẩu hàng rau quả. Trong 8 tháng đầu năm 2017, các thị trường có giá trị xuất khẩu hàng rau quả tăng mạnh là Nhật Bản (64,6%), Tiểu Vương Quốc Ả Rập Thống Nhất (64,4%), Trung Quốc (60,2%), Nga (41,9%), Hoa Kỳ (26,6%), Đài Loan (16,1%) và Hà Lan (9,4%).</p>
+                    <p>Ước giá trị nhập khẩu mặt hàng rau quả tháng 9 năm 2017 đạt 135 triệu USD, đưa giá trị nhập khẩu rau quả 9 tháng đầu năm 2017 đạt 1,15 tỷ USD, tăng 78,2% so với cùng kỳ năm 2016. Trong đó, mặt hàng rau ước đạt 218 triệu USD, tăng 30,1% so với cùng kỳ 2016 và mặt hàng quả đạt 914 triệu USD, tăng gần 2 lần so với cùng kỳ năm 2016.</p>
+                    <p>Thị trường nhập khẩu rau quả lớn nhất trong 8 tháng đầu năm 2017 là thị trường Thái Lan (chiếm tới 60,7% thị phần), tiếp đến là thị trường Trung Quốc (chiếm 15,7%). Trong 8 tháng đầu năm 2017 giá trị nhập khẩu rau quả ở tất cả các thị trường đều tăng so với cùng kỳ năm 2016. Trong đó, thị trường có giá trị nhập khẩu rau quả tăng nhiều nhất là Thái Lan (gấp hơn 2,8 lần), tiếp đến là thị trường Ấn Độ (gấp hơn 2,2 lần) và thị trường Hàn Quốc (tăng 70,8%).</p>
+                    <p>Trong tháng 9/2017, trước cơn sốt giá sầu riêng tại các tỉnh Tây Nguyên, nhiều tiểu thương sẵn sàng đổ tiền vào các nhà vườn để thu mua sầu riêng non lẫn chín. Tại huyện Krông Pắk (tỉnh Đắk Lắk), một số loại sầu riêng chất lượng cao được thu mua với giá 54.000 đồng/kg - mức giá kỷ lục nhiều năm.</p>
+                    <p>Đồng thời, giá dừa khô tại tỉnh Trà Vinh không ngừng tăng cao với mức thu mua tại vườn 150.000 đồng/chục (12 trái). Đây là mức giá dừa khô cao nhất trong vòng 6 năm qua, đem lại cho mỗi 1 ha vườn dừa thu nhập khoảng 15 triệu đồng/tháng.</p>
+                    <p>Trong khi đó, thị trường rau củ tại Lâm Đồng tương đối ổn định chỉ có một số rau như cà chua, hoa lơ xanh và cải bó xôi giảm nhẹ với mức giảm 2.000-3.000 đồng/kg so với đầu tháng.</p>
+                    <p>Nhìn lại 9 tháng đầu năm, thị trường trái cây biến động thất thường do đặc tính thời vụ của từng loại trái cây. Trong khi đó, thị trường rau củ bị ảnh hưởng của thời tiết đặc biệt những cơn bão gần đây đã làm nguồn cung giảm khiến thị trường tăng mạnh vào tháng 7 và 8, tuy nhiên đến nay thị trường có dấu hiệu hồi phục.</p>
+                ',
+                'image' => 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/articles/41968416-280694729439890-8459559393178510661-n.jpg?v=1553650945157'
+            ],
+            [
+                'title' => 'Bí quyết bảo quản nho đen trong tủ lạnh tươi lâu hơn',
+                'create_at' => '2019-03-27',
+                'author' => 'Cool Team',
+                'content' => '
+                    <p>Bí quyết lựa chọn và bảo quản nho tươi - Nho rất ngon và tốt cho sức khỏe, tuy nhiên nếu không biết cách bảo quản nho sẽ không để được lâu hoặc bị hỏng, không tốt cho sức khỏe. Hôm nay hãy tìm hiểu mẹo vặt lựa chọn và bảo quản nho tươi thật lâu mà vẫn giữ được độ tươi ngon nhé bạn.</p>
+                    <h2>Hướng dẫn:</h2>
+                    <p>Nho rất tốt cho sức khỏe, để bảo quản được lâu, trước hết bạn cần chọn được những quả nho tươi ngon. Cách để chọn được nho tươi ngon rất đơn giản, các bạn chỉ cần chú ý đến màu sắc của chúng. Cụ thể, đối với nho xanh, vỏ nho cần có màu xanh mát cùng lớp phấn bên ngoài; không dập nát; khó dứt khỏi cuống; ngửi không thấy mùi chua.
+                    Tương tự, nho đỏ vẫn giữ được màu nâu phấn, không thối nhũn, sờ vào quả đanh cứng.</p>
+                    <p>Sau đó bạn tiếp tục kiểm tra toàn bộ chùm nho xem có phần nào bị mốc hay hiện tượng lạ không nhé, nếu có thì bạn cần loại bỏ ngay tránh ảnh hưởng đến các chùm nho khác nhé.</p>
+                    <p>Một chú ý tiếp theo nữa đó chính là bạn không nên rửa nho nếu không có ý định ăn ngay. Bởi vì việc rửa nho sẽ làm mất đi lớp phấn bảo vệ bên ngoài, khiến cho quá trình chín diễn ra nhanh hơn.</p>
+                    <p>Cách bảo quản nho trong tủ lạnh đó là cho nho vào một túi nilon kín và bảo quản chúng ở nhiệt độ từ 30 -32 độ F (tương đương -1 - 0 độ C). Chú ý để nho sát về phía sau tủ bởi vị trí này nhiệt độ thấp, khả năng lưu thông không khí cao. Bạn cũng có thể sử dụng các sản phẩm túi hút chân không hoặc là hộp hút chân không cũng được càng làm tăng hiệu quả khi bảo quản nho.</p>
+                    <h2>Bên cạnh đó bạn cũng nên chú ý một số điểm nhỏ nữa khi bảo quản nho tươi đó là:</h2>
+                    <p>- Không để nho chồng lên nhau bởi như vậy sẽ khiến chúng nhanh hỏng hơn.</p>
+                    <p>- Tránh bảo quản nho gần các loại thực phẩm có mùi mạnh như hành tây, tỏi. Nguyên nhân là nho có khả năng hấp thụ mùi. Việc để gần hành tây, tỏi dễ khiến mùi vị của nho bị "biến chất".</p>
+                    <p>- Khi ăn, bạn cần rửa sạch nho để loại bỏ vi khuẩn cũng như các chất bẩn khác.</p>
+                    <p>- Một khi đã bỏ ra ngoài, bạn nên ăn càng sớm càng có lợi. Tốt nhất, tiêu thụ nho trước 72 giờ kể từ khi lấy khỏi tủ lạnh. Nếu để lâu, nho sẽ bị nhăn và thu nhỏ lại.</p>
+                    <p>Trên đây là một số mẹo hay mà sotaynauan mách bạn. Rất mong qua bài này bạn sẽ có cách để bảo quản nho cũng như các thực phẩm khác tươi ngon hơn, tốt hơn cho sức khỏe. Chúc bạn thành công!</p>
+
+                ',
+                'image' => 'https://bizweb.dktcdn.net/thumb/1024x1024/100/350/980/articles/istock-688005624-1000-plus-copy.jpg?v=1553650879330'
+            ]
         ];
 
         /*
-            'id',
-            'name',
-        'price',
-        'price_sale',
-        'brand' => "Đang cập nhật",
-        'origin',
-        'weigh',
-        'description',
-        'detail'
+            'title' => '',
+                'create_at' => '',
+                'author' => '',
+                'content' => '',
+                'image' => ''
 
         */
 
@@ -869,7 +923,17 @@ class DatabaseSeeder extends Seeder
                 'description' => $value['description'],
                 'detail' => $value['detail'],
                 'images' => $value['images'],
-                'sold' => random_int(20,100)
+                'sold' => random_int(20, 100)
+            ]);
+        }
+
+        foreach ($arrBlogs as $key => $value) {
+            Blog::create([
+                'title' => $value['title'],
+                'create_at' => $value['create_at'],
+                'author' => $value['author'],
+                'content' => $value['content'],
+                'image' => $value['image']
             ]);
         }
     }

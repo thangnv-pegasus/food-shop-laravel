@@ -16,7 +16,7 @@
                         <i class="fa-solid fa-caret-down"></i>
                     </a>
                     <ul
-                        class="absolute top-full left-0 w-52 text-sm shadow-subNav transition-all ease-liner duration-300 hidden rounded-md overflow-hidden group-hover:block">
+                        class="absolute top-full bg-white z-10 left-0 w-52 text-sm shadow-subNav transition-all ease-liner duration-300 hidden rounded-md overflow-hidden group-hover:block">
                         <li class="px-3"><a href=""
                                 class="py-3 block border-b-[1px] border-solid border-[#e5e6ec] transition-all ease-linear hover:text-baseColor">Rau
                                 củ</a></li>
