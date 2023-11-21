@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="p-6 bg-[#f5f6fb]">
-        <a href="/product{{ $product->id }}"
+        <a href="/product/{{ $product->id }}"
             class="line-clamp-1 text-center leading-6 text-base transition-all ease-linear hover:text-baseColor font-medium">
             {{ $product->name }}
         </a>

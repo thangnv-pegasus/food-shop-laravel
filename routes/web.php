@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
 use App\Models\Aboutme;
 use App\Models\Banner;
+use App\Models\Blog;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class,'create'])->name('index');
+Route::get('/', [HomeController::class, 'create'])->name('index');
 
 Route::get('/gioi-thieu', function () {
     return view('pages.gioi-thieu');
@@ -28,11 +31,12 @@ Route::get('/san-pham', [ProductsController::class, 'create']);
 
 Route::get('/{collectionName}', [CollectionController::class, 'setCollection']);
 
-Route::get('/tin-tuc', function () {
-    return view('pages.tin-tuc');
-});
+Route::get('/tin-tuc', [BlogsController::class, 'create']);
+
+Route::get('/blogs', [BlogsController::class, 'create']);
 
 Route::get('/lien-he', function () {
+    dd('lien he');
     return view('pages.lien-he');
 });
 
@@ -47,3 +51,9 @@ Route::get('/dang-nhap', function () {
 Route::get('/dang-ky', function () {
     return view('pages.dang-ky');
 });
+
+Route::get('/tin-tuc2', fn() => view('pages.blogs'));
+
+Route::get('/tin-tuc/{id}', fn($id) => view('pages.detail-blog', ['blog' => Blog::firstWhere('id', '=', $id)]));
+
+Route::get('/product/{id}', fn($id) => view('pages.detail-product', ['product' => Product::firstWhere('id', '=', $id)]));

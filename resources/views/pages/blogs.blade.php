@@ -1,3 +1,3 @@
 <x-layout>
-    tin tuc page
+    trang tin tuc
 </x-layout>

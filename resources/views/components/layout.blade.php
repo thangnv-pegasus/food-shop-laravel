@@ -54,7 +54,8 @@
                         'productShadow': '0px 12px 16px rgba(0,0,0,0.12)'
                     },
                     textColor: {
-                        'baseColor': '#91ad41'
+                        'baseColor': '#91ad41',
+                        'grayColor': '#707070'
                     },
                     backgroundImage: {
                         'bgStriped': "linear-gradient(35deg, #91ad41 0%, #ff8a6c 100%)",
@@ -63,10 +64,12 @@
                         '4fr_8fr': '4fr 8fr'
                     },
                     backgroundColor: {
-                        'baseColor': '#91ad41'
+                        'baseColor': '#91ad41',
+                        'grayColor': '#707070'
                     },
                     borderColor: {
-                        'baseColor': '#91ad41'
+                        'baseColor': '#91ad41',
+                        'grayColor': '#707070'
                     }
                 }
             }
@@ -76,7 +79,9 @@
 
 <body>
     <x-header />
-    {{ $slot }}
+    <div>
+        {{ $slot }}
+    </div>
     <x-footer />
 </body>
 
