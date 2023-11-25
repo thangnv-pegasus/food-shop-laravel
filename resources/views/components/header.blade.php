@@ -6,12 +6,15 @@
                     alt="" class="w-full h-full object-cover object-center">
             </a>
             <ul class="flex ml-10">
-                <li class="mx-2 px-2 py-3 text-base"><a href="/"
-                        class="transition-all ease-linear hover:text-baseColor">Trang chủ</a></li>
-                <li class="mx-2 px-2 py-3 text-base"><a href="/gioi-thieu"
-                        class="transition-all ease-linear hover:text-baseColor">Giới thiệu</a></li>
+                <li
+                    class="{{ request()->segment(1) === '' ? 'text-baseColor' : 'text-black' }} mx-2 px-2 py-3 text-base">
+                    <a href="/" class="transition-all ease-linear hover:text-baseColor">Trang chủ</a></li>
+                <li
+                    class="{{ request()->segment(1) === 'gioi-thieu' ? 'text-baseColor' : 'text-black' }} mx-2 px-2 py-3 text-base">
+                    <a href="/gioi-thieu" class="transition-all ease-linear hover:text-baseColor">Giới thiệu</a></li>
                 <li class="mx-2 px-2 py-3 text-base relative group">
-                    <a href="/san-pham" class="transition-all ease-linear hover:text-baseColor">
+                    <a href="/san-pham"
+                        class="{{ request()->segment(1) === 'san-pham' ? 'text-baseColor' : 'text-black' }} transition-all ease-linear hover:text-baseColor">
                         Sản phẩm
                         <i class="fa-solid fa-caret-down"></i>
                     </a>
@@ -34,10 +37,14 @@
                                 sống</a></li>
                     </ul>
                 </li>
-                <li class="mx-2 px-2 py-3 text-base"><a href="/tin-tuc"
-                        class="transition-all ease-linear hover:text-baseColor">Tin tức</a></li>
+                <li class="mx-2 px-2 py-3 text-base">
+                    <a href="/tin-tuc"
+                        class="{{ request()->segment(1) === 'tin-tuc' ? 'text-baseColor' : 'text-black' }} transition-all ease-linear hover:text-baseColor">Tin
+                        tức</a>
+                </li>
                 <li class="mx-2 px-2 py-3 text-base"><a href="/lien-he"
-                        class="transition-all ease-linear hover:text-baseColor">Liên hệ</a></li>
+                        class="{{ request()->segment(1) === 'lien-he' ? 'text-baseColor' : 'text-black' }} transition-all ease-linear hover:text-baseColor">Liên
+                        hệ</a></li>
             </ul>
         </div>
         <div class="flex items-center text-lg">

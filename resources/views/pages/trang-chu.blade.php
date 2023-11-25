@@ -39,7 +39,6 @@
         </div>
 
         {{-- Danh muc san pham --}}
-
         <div class="max-w-container mx-auto py-8">
             <x-title-collection title="Danh mục sản phẩm" to="/san-pham" />
             @livewire('tab-collection')

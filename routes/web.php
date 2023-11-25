@@ -36,7 +36,6 @@ Route::get('/tin-tuc', [BlogsController::class, 'create']);
 Route::get('/blogs', [BlogsController::class, 'create']);
 
 Route::get('/lien-he', function () {
-    dd('lien he');
     return view('pages.lien-he');
 });
 
