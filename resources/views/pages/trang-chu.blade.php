@@ -42,12 +42,8 @@
 
         <div class="max-w-container mx-auto py-8">
             <x-title-collection title="Danh mục sản phẩm" to="/san-pham" />
-            <x-tab-collection :$products />
-            <div class="grid grid-cols-4 gap-5 py-5">
-                @foreach ($products as $product)
-                    <x-product :$product />
-                @endforeach
-            </div>
+            @livewire('tab-collection')
+            @livewireScripts
         </div>
 
         {{-- Hotline --}}

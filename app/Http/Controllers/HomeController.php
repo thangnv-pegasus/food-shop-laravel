@@ -14,7 +14,6 @@ class HomeController extends Controller
         return view('pages.trang-chu',[
             'banners' => Banner::all(),
             'aboutmes' => Aboutme::all(),
-            'products' => isset($request->collectionName) ? Product::all()->where('collection','=', $request->collectionName)->take(8) : Product::all()->where('collection','=','vegetable')->take(8),
             'bestSeller' => Product::all()
                     ->sortByDesc('sold')
                     ->take(4),

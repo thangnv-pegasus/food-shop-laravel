@@ -29,7 +29,7 @@ Route::get('/gioi-thieu', function () {
 
 Route::get('/san-pham', [ProductsController::class, 'create']);
 
-Route::get('/{collectionName}', [CollectionController::class, 'setCollection']);
+// Route::get('/{collectionName}', [CollectionController::class, 'setCollection']);
 
 Route::get('/tin-tuc', [BlogsController::class, 'create']);
 
