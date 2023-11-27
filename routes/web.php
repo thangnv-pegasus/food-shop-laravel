@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\HomeController;
+
 use App\Http\Controllers\ProductsController;
 use App\Models\Aboutme;
 use App\Models\Banner;
@@ -55,4 +56,4 @@ Route::get('/tin-tuc2', fn() => view('pages.blogs'));
 
 Route::get('/tin-tuc/{id}', fn($id) => view('pages.detail-blog', ['blog' => Blog::firstWhere('id', '=', $id)]));
 
-Route::get('/product/{id}', fn($id) => view('pages.detail-product', ['product' => Product::firstWhere('id', '=', $id)]));
+Route::get('/product/{id}', [ProductsController::class, 'detail']);

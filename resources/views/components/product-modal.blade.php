@@ -72,8 +72,6 @@
                         class="border-[1px] mx-3 inline-block border-solid border-[#ebebeb] w-8 h-8 leading-[32px] text-center rounded-full text-base"></span>
                     <button x-on:click="count++"
                         class="border-[1px] border-solid border-[#ebebeb] w-8 h-8 leading-[24px] text-center rounded-full">+</button>
-
-
                 </div>
 
             </div>
