@@ -7,34 +7,49 @@
             </a>
             <ul class="flex ml-10">
                 <li
-                    class="{{ request()->segment(1) === '' ? 'text-baseColor' : 'text-black' }} mx-2 px-2 py-3 text-base">
+                    class="{{ request()->segment(0) === '' ? 'text-baseColor' : 'text-black' }} mx-2 px-2 py-3 text-base">
                     <a href="/" class="transition-all ease-linear hover:text-baseColor">Trang chủ</a></li>
                 <li
                     class="{{ request()->segment(1) === 'gioi-thieu' ? 'text-baseColor' : 'text-black' }} mx-2 px-2 py-3 text-base">
                     <a href="/gioi-thieu" class="transition-all ease-linear hover:text-baseColor">Giới thiệu</a></li>
                 <li class="mx-2 px-2 py-3 text-base relative group">
-                    <a href="/san-pham"
+                    <a href="/products/all"
                         class="{{ request()->segment(1) === 'san-pham' ? 'text-baseColor' : 'text-black' }} transition-all ease-linear hover:text-baseColor">
                         Sản phẩm
                         <i class="fa-solid fa-caret-down"></i>
                     </a>
                     <ul
                         class="absolute top-full bg-white z-10 left-0 w-52 text-sm shadow-subNav transition-all ease-liner duration-300 hidden rounded-md overflow-hidden group-hover:block">
-                        <li class="px-3"><a href=""
-                                class="py-3 block border-b-[1px] border-solid border-[#e5e6ec] transition-all ease-linear hover:text-baseColor">Rau
-                                củ</a></li>
-                        <li class="px-3"><a href=""
-                                class="py-3 block border-b-[1px] border-solid border-[#e5e6ec] transition-all ease-linear hover:text-baseColor">Hoa
-                                quả</a></li>
-                        <li class="px-3"><a href=""
-                                class="py-3 block border-b-[1px] border-solid border-[#e5e6ec] transition-all ease-linear hover:text-baseColor">Hải
-                                sản</a></li>
-                        <li class="px-3"><a href=""
-                                class="py-3 block border-b-[1px] border-solid border-[#e5e6ec] transition-all ease-linear hover:text-baseColor">Các
-                                loại hạt</a></li>
-                        <li class="px-3"><a href=""
-                                class="py-3 block transition-all ease-linear hover:text-baseColor">Thực phẩm tươi
-                                sống</a></li>
+                        <li class="px-3">
+                            <a href="/products/{{ 'vegetable' }}"
+                                class="py-3 block border-b-[1px] border-solid border-[#e5e6ec] transition-all ease-linear hover:text-baseColor">
+                                Rau củ
+                            </a>
+                        </li>
+                        <li class="px-3">
+                            <a href="/products/{{ 'fruit' }}"
+                                class="py-3 block border-b-[1px] border-solid border-[#e5e6ec] transition-all ease-linear hover:text-baseColor">
+                                Hoa quả
+                            </a>
+                        </li>
+                        <li class="px-3">
+                            <a href="/products/{{ 'sea-food' }}"
+                                class="py-3 block border-b-[1px] border-solid border-[#e5e6ec] transition-all ease-linear hover:text-baseColor">
+                                Hải sản
+                            </a>
+                            </li>
+                        <li class="px-3">
+                            <a href="/products/{{ 'nuts' }}"
+                                class="py-3 block border-b-[1px] border-solid border-[#e5e6ec] transition-all ease-linear hover:text-baseColor">
+                                Các loại hạt
+                            </a>
+                        </li>
+                        <li class="px-3">
+                            <a href="/products/{{ 'fresh-food' }}"
+                                class="py-3 block transition-all ease-linear hover:text-baseColor">
+                                Thực phẩm tươi sống
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="mx-2 px-2 py-3 text-base">

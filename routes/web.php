@@ -1,14 +1,11 @@
 <?php
 
 use App\Http\Controllers\BlogsController;
-use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\ProductsController;
-use App\Models\Aboutme;
-use App\Models\Banner;
+use App\Livewire\Products;
 use App\Models\Blog;
-use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,9 +25,7 @@ Route::get('/gioi-thieu', function () {
     return view('pages.gioi-thieu');
 });
 
-Route::get('/san-pham', [ProductsController::class, 'create']);
-
-// Route::get('/{collectionName}', [CollectionController::class, 'setCollection']);
+Route::get('/products/{collection}', Products::class);
 
 Route::get('/tin-tuc', [BlogsController::class, 'create']);
 

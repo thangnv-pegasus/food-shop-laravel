@@ -9,15 +9,21 @@ class ProductsController extends Controller
 {
     //
 
-    public function create()
+    public function create($collection)
     {
+        if($collection === 'all'){
+            $product = Product::paginate(12);
+        }else{
+            $product = Product::where('collection','=',$collection)->paginate(12);
+        }
         return view('pages.san-pham', [
-            'products' => Product::paginate(12)
+            'products' => $product
         ]);
     }
 
     public function detail($id)
     {
+        // dd($id);
         $p = Product::firstWhere('id', '=', $id);
         return view('pages.detail-product', [
             'product' => $p,
