@@ -7,6 +7,7 @@ use App\Models\AboutMe;
 use App\Models\Banner;
 use App\Models\Blog;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -936,5 +937,13 @@ class DatabaseSeeder extends Seeder
                 'image' => $value['image']
             ]);
         }
+
+        User::create([
+            'name' => 'admin',
+            'email' => 'admin@gmail.com',
+            'phone' => '1234567890',
+            'password' => 'admin',
+            'role' => 'admin'
+        ]);
     }
 }

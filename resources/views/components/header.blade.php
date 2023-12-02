@@ -8,10 +8,12 @@
             <ul class="flex ml-10">
                 <li
                     class="{{ request()->segment(0) === '' ? 'text-baseColor' : 'text-black' }} mx-2 px-2 py-3 text-base">
-                    <a href="/" class="transition-all ease-linear hover:text-baseColor">Trang chủ</a></li>
+                    <a href="/" class="transition-all ease-linear hover:text-baseColor">Trang chủ</a>
+                </li>
                 <li
                     class="{{ request()->segment(1) === 'gioi-thieu' ? 'text-baseColor' : 'text-black' }} mx-2 px-2 py-3 text-base">
-                    <a href="/gioi-thieu" class="transition-all ease-linear hover:text-baseColor">Giới thiệu</a></li>
+                    <a href="/gioi-thieu" class="transition-all ease-linear hover:text-baseColor">Giới thiệu</a>
+                </li>
                 <li class="mx-2 px-2 py-3 text-base relative group">
                     <a href="/products/all"
                         class="{{ request()->segment(1) === 'san-pham' ? 'text-baseColor' : 'text-black' }} transition-all ease-linear hover:text-baseColor">
@@ -37,7 +39,7 @@
                                 class="py-3 block border-b-[1px] border-solid border-[#e5e6ec] transition-all ease-linear hover:text-baseColor">
                                 Hải sản
                             </a>
-                            </li>
+                        </li>
                         <li class="px-3">
                             <a href="/products/{{ 'nuts' }}"
                                 class="py-3 block border-b-[1px] border-solid border-[#e5e6ec] transition-all ease-linear hover:text-baseColor">
@@ -76,13 +78,28 @@
                 <i class="fa-solid fa-user-plus"></i>
                 <div
                     class="absolute top-full -left-20 text-sm w-52 bg-white border-[1px] border-solid border-[#91ad41] px-2 rounded-xl overflow-hidden hidden group-hover:block">
-                    <a href="/dang-nhap" class="block py-2 text-center my-2 bg-bgStriped text-white rounded-full">
-                        Đăng nhập
-                    </a>
-                    <a href="/dang-ky"
-                        class="block py-2 text-center my-2 border-solid border-[1px] border-[#ebebeb] transition-all ease-linear hover:bg-[#91ad41] rounded-full hover:text-white">
-                        Đăng ký
-                    </a>
+                    @auth
+                        <a class="block py-2 text-center my-2 bg-bgStriped text-white rounded-full">
+                            {{ auth()->user()->name }}
+                        </a>
+
+                        <form action="/logout" method="post" class="block">
+                            @csrf
+                            <input
+                                type="submit"
+                                class="block w-full cursor-pointer py-2 text-center my-2 border-solid border-[1px] border-[#ebebeb] transition-all ease-linear hover:bg-[#91ad41] rounded-full hover:text-white"
+                                value="Đăng xuất"
+                            />
+                        </form>
+                    @else
+                        <a href="/login" class="block py-2 text-center my-2 bg-bgStriped text-white rounded-full">
+                            Đăng nhập
+                        </a>
+                        <a href="/register"
+                            class="block py-2 text-center my-2 border-solid border-[1px] border-[#ebebeb] transition-all ease-linear hover:bg-[#91ad41] rounded-full hover:text-white">
+                            Đăng ký
+                        </a>
+                    @endauth
                 </div>
             </div>
             <a href='/gio-hang' class="relative py-3 group px-2">
