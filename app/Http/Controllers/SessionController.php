@@ -34,7 +34,7 @@ class SessionController extends Controller
         //     ->withInput()
         //     ->withErrors([
         //         'email' => 'Your provided credentials could not be verified'
-        //     ]);
+        //     ]); 
 
     }
 
