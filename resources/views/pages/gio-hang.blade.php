@@ -1,5 +1,5 @@
 <x-layout>
-
+    {{-- {{ dd($products) }} --}}
     <x-title-page title="Giỏ hàng" />
     <div>
         <div class="max-w-container mx-auto py-10">

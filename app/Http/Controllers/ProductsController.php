@@ -30,4 +30,9 @@ class ProductsController extends Controller
             'related' => Product::all()->where('collection', $p->collection)->take(4)
         ]);
     }
+
+    public function addStore(){
+        $req = request()->input('quantity');
+        echo 'request: '. $req;
+    }
 }

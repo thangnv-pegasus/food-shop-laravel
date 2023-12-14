@@ -8,6 +8,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
 use App\Livewire\Products;
 use App\Models\Blog;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,27 +30,37 @@ Route::get('/gioi-thieu', function () {
 
 Route::get('/products/{collection}', Products::class);
 
-Route::get('/tin-tuc', [BlogsController::class, 'create']);
-
-Route::get('/blogs', [BlogsController::class, 'create']);
+Route::prefix('/tin-tuc')->group(function (){
+    Route::get('/', [BlogsController::class, 'create']);
+    Route::get('/{id}', fn($id) => view('pages.detail-blog', ['blog' => Blog::firstWhere('id', '=', $id)]));
+});
 
 Route::get('/lien-he', function () {
     return view('pages.lien-he');
 });
 
 Route::get('/gio-hang', function () {
-    return view('pages.gio-hang');
+    return view('pages.gio-hang', [
+        // 'products' => Auth::user()->products()->get()
+    ]);
+})->middleware('is-loggin');
+
+Route::prefix('/login')->group(function (){
+    Route::get('/', [SessionController::class,'create'])->middleware('guest');
+    Route::post('/', [SessionController::class,'store'])->middleware('guest');
 });
 
-Route::get('/login', [SessionController::class,'create'])->middleware('guest');
-Route::post('/login', [SessionController::class,'store'])->middleware('guest');
+Route::prefix('/register')->group(function (){
+    Route::get('/', [RegisterController::class, 'create'])->middleware('guest');
+    Route::post('/', [RegisterController::class, 'store'])->middleware('guest');
+});
 
-Route::get('/register', [RegisterController::class, 'create'])->middleware('guest');
-Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
+Route::prefix('/product')->group(function (){
+    Route::get('/{id}', [ProductsController::class, 'detail']);
+    Route::post('/', [ProductsController::class, 'addStore']);
+});
+
+
 Route::post('/logout',[SessionController::class,'destroy'])->middleware('auth');
 
-Route::get('/tin-tuc2', fn() => view('pages.blogs'));
 
-Route::get('/tin-tuc/{id}', fn($id) => view('pages.detail-blog', ['blog' => Blog::firstWhere('id', '=', $id)]));
-
-Route::get('/product/{id}', [ProductsController::class, 'detail']);

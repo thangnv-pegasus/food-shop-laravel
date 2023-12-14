@@ -6,17 +6,19 @@
                     alt="" class="w-full h-full object-cover object-center">
             </a>
             <ul class="flex ml-10">
+                {{-- {{ dd(request()->path()) }} --}}
                 <li
-                    class="{{ request()->segment(0) === '' ? 'text-baseColor' : 'text-black' }} mx-2 px-2 py-3 text-base">
+                    class="{{ request()->path() === '/' || request()->path() === '' ? 'text-baseColor' : 'text-black' }} mx-2 px-2 py-3 text-base">
                     <a href="/" class="transition-all ease-linear hover:text-baseColor">Trang chủ</a>
                 </li>
                 <li
                     class="{{ request()->segment(1) === 'gioi-thieu' ? 'text-baseColor' : 'text-black' }} mx-2 px-2 py-3 text-base">
                     <a href="/gioi-thieu" class="transition-all ease-linear hover:text-baseColor">Giới thiệu</a>
                 </li>
+                {{-- {{ request()->segment(1) }} --}}
                 <li class="mx-2 px-2 py-3 text-base relative group">
                     <a href="/products/all"
-                        class="{{ request()->segment(1) === 'san-pham' ? 'text-baseColor' : 'text-black' }} transition-all ease-linear hover:text-baseColor">
+                        class="{{ request()->segment(1) === 'products' ? 'text-baseColor' : 'text-black' }} transition-all ease-linear hover:text-baseColor">
                         Sản phẩm
                         <i class="fa-solid fa-caret-down"></i>
                     </a>
@@ -85,11 +87,9 @@
 
                         <form action="/logout" method="post" class="block">
                             @csrf
-                            <input
-                                type="submit"
+                            <input type="submit"
                                 class="block w-full cursor-pointer py-2 text-center my-2 border-solid border-[1px] border-[#ebebeb] transition-all ease-linear hover:bg-[#91ad41] rounded-full hover:text-white"
-                                value="Đăng xuất"
-                            />
+                                value="Đăng xuất" />
                         </form>
                     @else
                         <a href="/login" class="block py-2 text-center my-2 bg-bgStriped text-white rounded-full">
@@ -102,16 +102,6 @@
                     @endauth
                 </div>
             </div>
-            <a href='/gio-hang' class="relative py-3 group px-2">
-                <i class="fa-solid fa-basket-shopping"></i>
-                <p
-                    class="absolute -top-0 -right-[14px] text-xs bg-bgStriped text-white w-5 h-5 overflow-hidden text-center leading-5 rounded-full">
-                    0
-                </p>
-                <div
-                    class="absolute top-full right-0 w-64 p-4 text-sm bg-white border-solid border-[1px] border-[#91ad41] rounded-lg hidden group-hover:block">
-                    Không có sản phẩm nào trong giỏ hàng
-                </div>
-            </a>
+            @livewire('cart-btn')
         </div>
 </header>

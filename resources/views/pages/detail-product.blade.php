@@ -1,7 +1,7 @@
 <x-layout>
-    <x-title-page title="{{ $product->name }}" />
-    <div>
-        <div class="max-w-container mx-auto py-10">
+    <x-title-page title="{{ $productx->name }}" />
+    <div class="py-10">
+        <div class="max-w-container mx-auto">
             <div class="grid grid-cols-2 gap-x-10">
                 <div>
                     <div class="w-full h-[31rem] border-[1px] border-solid border-[#ebebeb] rounded-lg overflow-hidden">
@@ -56,30 +56,7 @@
                         </p>
                     @endif
                     <div class="py-5 border-t-[1px] border-solid border-[#ebebeb]">
-                        <div class="flex items-center">
-                            <div>
-                                Số lượng:
-                            </div>
-                            <div x-data="{ count: 1 }" class="pl-5 text-lg flex items-center">
-                                <template x-if="count <= 1">
-                                    <button
-                                        class="border-[1px] border-solid border-[#ebebeb] w-8 h-8 leading-[24px] text-center rounded-full transition-all ease-linear hover:border-baseColor">-</button>
-                                </template>
-                                <template x-if="count > 1">
-                                    <button x-on:click="count--"
-                                        class="border-[1px] border-solid border-[#ebebeb] w-8 h-8 leading-[24px] text-center rounded-full transition-all ease-linear hover:border-baseColor">-</button>
-                                </template>
-                                <span x-text="count"
-                                    class="border-[1px] mx-3 inline-block border-solid border-[#ebebeb] w-8 h-8 leading-[32px] text-center rounded-full text-base"></span>
-                                <button x-on:click="count++"
-                                    class="border-[1px] border-solid border-[#ebebeb] w-8 h-8 leading-[24px] text-center rounded-full transition-all ease-linear hover:border-baseColor">+</button>
-                            </div>
-
-                        </div>
-                        <form action="" method="post" class="block py-2 mt-5">
-                            <input type="submit" value="Thêm vào giỏ hàng"
-                                class="block w-64 text-center bg-bgStriped text-white text-base font-medium py-2 rounded-full cursor-pointer">
-                        </form>
+                        @livewire("form-add-store", ['id' => $product->id])
                         <p class="py-3 text-sm">
                             Gọi đặt mua: <a href="tel:19006750"
                                 class="transition-all ease-linear text-baseColor hover:text-black">19006750</a> để nhanh
@@ -88,6 +65,9 @@
                     </div>
                 </div>
             </div>
+           
+        </div>
+        <div class="max-w-container mx-auto"> 
             <a href="" class="block w-full my-5">
                 <img src="https://bizweb.dktcdn.net/100/350/980/themes/802125/assets/bg_pro.jpg?1677439224289"
                     alt="" class="w-full h-auto">
